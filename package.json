@@ -2,6 +2,16 @@
   "name": "color-highlighting",
   "main": "./lib/color-highlighting",
   "version": "0.1.0",
+  "author": {
+    "name": "Petr Brzek",
+    "email": "petrbrzek@abdoc.net"
+  },
+  "contributors": [
+    {
+      "name": "Jan Sedivy",
+      "email": "jansedivy@abdoc.net"
+    }
+  ],
   "description": "Highlight colors in CSS files",
   "repository": "https://github.com/madebysource/atom-color-highlighting",
   "license": "MIT",
