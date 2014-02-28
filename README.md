@@ -5,7 +5,7 @@
 ## How to get it
 
 ```bash
-apm install color-highlighting
+apm install css-color-highlighting
 ```
 
 ## Features:
