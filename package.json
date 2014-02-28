@@ -1,0 +1,12 @@
+{
+  "name": "color-highlighting",
+  "main": "./lib/color-highlighting",
+  "version": "0.0.1",
+  "description": "Highlight colors in CSS files",
+  "repository": "https://github.com/madebysource/atom-color-highlighting",
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "dependencies": {}
+}
