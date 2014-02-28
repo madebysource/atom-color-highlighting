@@ -1,5 +1,5 @@
 {
-  "name": "color-highlighting",
+  "name": "css-color-highlighting",
   "main": "./lib/color-highlighting",
   "version": "0.1.0",
   "author": {
