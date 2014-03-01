@@ -1,7 +1,7 @@
 {
   "name": "css-color-highlighting",
   "main": "./lib/color-highlighting",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "author": {
     "name": "Petr Brzek",
     "email": "petrbrzek@abdoc.net"
