@@ -11,6 +11,12 @@ apm install css-color-highlighting
 ## Features:
 * Highlighting color values like black, blue or #bada55
 * Adjusting the text contrast to background
+* It works with:
+  * CSS: Hex, W3C colors, RGB(a), HSL(a)
+  * LESS: HEX, W3C colors, RGB(a)
+  * SASS/SCSS: HEX, W3C colors, RGB
 
 ## Roadmap
-* Highlight rgb(a)/hsl(a) values – they don't get color class (possible bug?)
+* Better HSL(A) and RGBA support
+* Menu item and Keybindings
+* Color Picker
