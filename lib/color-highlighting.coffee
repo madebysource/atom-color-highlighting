@@ -5,7 +5,9 @@ module.exports = activate: (state) ->
     window.getComputedStyle(element).getPropertyValue style
 
   rgbStringToValues = (rgb) ->
-    rgb.slice(4).slice(0, -1).split(",").map (value) ->
+    sliceNum = 4
+    sliceNum = 5  if /rgba|hsla/.test(rgb)
+    rgb.slice(sliceNum).slice(0, -1).split(",").map (value) ->
       parseInt value
 
 
@@ -27,6 +29,8 @@ module.exports = activate: (state) ->
         el.style.backgroundColor = el.innerText
       backgroundColor = getValue(el, "background-color")
       el.style.color = contrast(rgbStringToValues(backgroundColor))
+      return
+
 
     # CSS hsl
     atom.workspaceView.find(".meta.property-value.css").each (i, el) ->
@@ -36,6 +40,7 @@ module.exports = activate: (state) ->
         temp = ""
         hslValues = selectorCache.each(->
           temp += $(this).text() + ","
+          return
         )
         if temp.length
           temp = temp.slice(0, temp.length - 1)
@@ -43,6 +48,10 @@ module.exports = activate: (state) ->
             $(this)[0].style.backgroundColor = colorType + "(" + temp + ")"
             backgroundColor = getValue(this, "background-color")
             $(this)[0].style.color = contrast(rgbStringToValues(backgroundColor))
+            return
+
+      return
+
 
     # LESS rgb
     atom.workspaceView.find(".less").each ->
@@ -52,6 +61,7 @@ module.exports = activate: (state) ->
         temp = ""
         rgbValues = selectorCache.each(->
           temp += $(this).text() + ","
+          return
         )
         if temp.length
           temp = temp.slice(0, temp.length - 1)
@@ -59,7 +69,15 @@ module.exports = activate: (state) ->
             $(this)[0].style.backgroundColor = colorType + "(" + temp + ")"
             backgroundColor = getValue(this, "background-color")
             $(this)[0].style.color = contrast(rgbStringToValues(backgroundColor))
+            return
+
+      return
+
+    return
 
   applyColor()
   atom.workspaceView.eachEditorView (editorView) ->
     editorView.on "editor:display-updated", applyColor
+    return
+
+  return
