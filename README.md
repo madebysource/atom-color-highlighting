@@ -1,4 +1,7 @@
-#Atom Color Highlighting plugin
+# This plugin is not maintained anymore. Use https://github.com/abe33/atom-color-highlight instead. It's awesome!
+
+
+##Atom Color Highlighting plugin
 
 ![Color Highlighting](http://f.cl.ly/items/3p2w2k3w2v0y1G320s1K/Screen%20Shot%202014-02-28%20at%2019.25.22.png)
 
